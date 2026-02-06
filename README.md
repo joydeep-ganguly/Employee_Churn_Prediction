@@ -1,6 +1,6 @@
 # Employee Churn Prediction
 
-![alt text]('./empchurn.jpg)
+![alt text]('./empchurn.jpg')
 This repository contains an implementation of an **Employee Churn Prediction** system using **FastAPI** as the backend and **Streamlit** as the frontend. The system predicts whether an employee is likely to stay or leave based on various features such as age, tenure, salary, and more.
 
 ---
@@ -53,17 +53,11 @@ This repository contains an implementation of an **Employee Churn Prediction** s
 
 random_forest_model.pkl
 
--
+- scaler.pkl
 
-scaler.pkl
+- model_columns.pkl
 
--
-
-model_columns.pkl
-
--
-
-category_mapping.pkl
+- category_mapping.pkl
 
 ---
 
@@ -155,21 +149,7 @@ fname
 
 A sample CSV file (`testdata.csv`) is included for testing batch predictions. The file contains columns such as
 
-age
-
-,
-
-tenure
-
-,
-
-salary
-
-,
-
-dept_name
-
-, and more.
+age,tenure,salary,dept_name and more.
 
 ---
 
@@ -179,17 +159,7 @@ The backend preprocesses input data to match the model's training data:
 
 - Bins
 
-age
-
-,
-
-tenure
-
-, and
-
-salary
-
-into categorical groups.
+age,tenure, and salary into categorical groups.
 
 - Encodes categorical features using one-hot encoding.
 - Scales numerical features using a pre-trained scaler.
