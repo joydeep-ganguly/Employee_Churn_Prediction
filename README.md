@@ -110,11 +110,10 @@ The frontend will be available at `http://localhost:8501`.
     ```
 
 - **`POST /predictfile`**: Predicts churn for multiple employees from a CSV file.
+
   - Query Parameter:
-
-fname
-
-(path to the CSV file)
+    fname
+    (path to the CSV file)
 
 - Response:
   ```json
@@ -147,9 +146,7 @@ fname
 
 ## Sample Data
 
-A sample CSV file (`testdata.csv`) is included for testing batch predictions. The file contains columns such as
-
-age,tenure,salary,dept_name and more.
+A sample CSV file (`testdata.csv`) is included for testing batch predictions. The file contains columns such as age,tenure,salary,dept_name and more.
 
 ---
 
@@ -157,10 +154,7 @@ age,tenure,salary,dept_name and more.
 
 The backend preprocesses input data to match the model's training data:
 
-- Bins
-
-age,tenure, and salary into categorical groups.
-
+- Bins age,tenure, and salary into categorical groups.
 - Encodes categorical features using one-hot encoding.
 - Scales numerical features using a pre-trained scaler.
 
